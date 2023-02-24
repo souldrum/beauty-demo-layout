@@ -62,14 +62,12 @@ body, h1, h2, h3
 
     display: flex
     justify-content: center
-    width: 100%
+    width: 100vw
     height: 50px
 
     background: #e5e5e5
     @media (max-width: 768px)
-        position: static
-
-        height: 2.5em
+        height: 2.5rem
     @media (max-width: 425px)
         height: auto
     &__container
@@ -106,7 +104,7 @@ body, h1, h2, h3
     @media (max-width: 1150px)
         width: 100%
     @media (max-width: 768px)
-        position: static
+        margin-top: 2.5rem
     @media (max-width: 580px)
         flex-direction: column
         height: auto
@@ -229,8 +227,6 @@ body, h1, h2, h3
     background-color: $main-green
     @media (max-width: 1150px)
         height: 30em
-    @media (max-width: 768px)
-        position: static
     @media (max-width: 580px)
         flex-direction: column
         height: auto
@@ -289,24 +285,23 @@ body, h1, h2, h3
             transition: background .2s
     &__img
         position: absolute
-        top: -117px
+        top: 50%
         left: 50%
+        transform: translate(-28%, -50%)
 
         width: 859px
         height: 859px
-        margin-left: -240px
         @media (max-width: 1440px)
-            top: auto
-
-            width: 55em
-            height: 55em
-            margin-left: -226px
+            width: 55rem
+            height: 55rem
         @media (max-width: 1150px)
-            position: static
-
-            width: 40em
-            height: 40em
-            margin-right: 30px
+            width: 45rem
+            height: 45rem
+            transform: translate(-20%, -50%)
+        @media (max-width: 768px)
+            width: 38rem
+            height: 38rem
+            transform: translate(-22%, -50%)
         @media (max-width: 580px)
             width: 28em
             height: 28em
@@ -338,8 +333,11 @@ body, h1, h2, h3
                 width: 45em
                 height: 45em
             @media (max-width: 1150px)
-                width: 32em
-                height: 32em
+                width: 35rem
+                height: 35rem
+            @media (max-width: 768px)
+                width: 31rem
+                height: 31rem
             @media (max-width: 580px)
                 width: 23em
                 height: 23em
@@ -350,8 +348,8 @@ body, h1, h2, h3
             width: 584px
             height: 584px
             @media (max-width: 1150px)
-                width: 25em
-                height: 25em
+                width: 30rem
+                height: 30rem
             @media (max-width: 580px)
                 width: 23em
                 height: 23em
@@ -613,8 +611,6 @@ body, h1, h2, h3
         display: flex
         justify-content: flex-start
         flex: 1
-        @media (max-width: 1150px)
-            margin: 0 10px
     &__address
         flex: 1
 
@@ -626,7 +622,7 @@ body, h1, h2, h3
         justify-content: flex-end
     &__phone-feedback
         @media (max-width: 1150px)
-            margin: 0 10px
+            margin-left: 10px
 
 .icon-box
     display: flex
@@ -639,6 +635,8 @@ body, h1, h2, h3
     border-radius: 50%
     border: 2px solid $main-green
     background: #FFF
+    @media (max-width: 1150px)
+        margin-right: 10px
     &_youtube
         width: 22px
         height: 15px
@@ -664,9 +662,6 @@ body, h1, h2, h3
         display: flex
         justify-content: space-between
         align-items: center
-        width: 1110px
     &__copyright, &__privacy-policy
         color: #828282
         font: 400 normal 12px/14px $font-stack
-        @media (max-width: 1150px)
-            margin: 0 10px
