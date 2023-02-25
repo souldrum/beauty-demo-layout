@@ -1,0 +1,27 @@
+.location-card
+    +subscribe-location-cards
+    flex-direction: column
+    justify-content: space-evenly
+    padding-left: 40px
+    @media (max-width: 1150px)
+        margin-left: 10px
+        justify-content: space-between
+        padding: 10px
+    @media (max-width: 580px)
+        margin: 0
+        height: 10rem
+    &__shop-map
+        +buttons(#fff, $main-green)
+        height: 35px
+
+        color: #fff
+        font: 400 normal 1rem/16px $font-stack
+        @media (max-width: 1150px)
+            width: 10rem
+        @media (max-width: 320px)
+            height: 2rem
+        &:hover
+            cursor: pointer
+
+            background: #5aa952
+            transition: background .2s

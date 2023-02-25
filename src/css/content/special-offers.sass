@@ -1,0 +1,97 @@
+.special-offers
+    height: 430px
+    margin-top: 80px
+    @media (max-width: 1150px)
+        width: auto
+        height: auto
+    @media (max-width: 1024px)
+        margin-top: 3rem
+    @media (max-width: 580px)
+        margin-top: 0
+    &__header
+        display: flex
+        justify-content: space-between
+        height: 67px
+        @media (max-width: 1150px)
+            margin-left: 30px
+        @media (max-width: 1024px)
+            justify-content: space-around
+            flex-wrap: wrap
+            margin: 0
+        @media (max-width: 580px)
+            justify-content: center
+            align-items: center
+            flex-direction: column-reverse
+            height: auto
+    &__header-title
+        color: #000
+        font: 700 normal 24px/28px $font-stack
+        @media (max-width: 580px)
+            width: 100%
+            margin: 10px
+
+            text-align: center
+    &__header-img
+        position: relative
+        bottom: 16.45px
+        right: 45.33px
+        width: 188.67px
+        height: 60.75px
+        @media (max-width: 1024px)
+            right: 0
+        @media (max-width: 580px)
+            position: static
+            margin: 10px
+    &__cards-container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        @media (max-width: 1105px)
+            justify-content: space-evenly
+    &__card
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        width: 255px
+        height: 363px
+
+        background: #FFFFFF
+        @media (max-width: 1150px)
+            margin: .5rem
+
+    &__img
+        width: 125px
+        height: 166px
+
+        background: #C4C4C4
+    &__description
+        margin: 0 30px
+
+        color: #333333
+        font: 400 normal 1rem/20px $font-stack
+        text-align: center
+    &__price
+        color: #000
+        font: 500 normal 1.5rem/25px $font-stack
+        text-align: center
+        letter-spacing: 0.05em
+        @media (max-width: 1024px)
+            font: 500 normal 1.3rem/25px $font-stack
+    &__buy
+        width: 130px
+        height: 35px
+
+        color: #fff
+        font: 400 normal 1rem/16px $font-stack
+        text-align: center
+        letter-spacing: 0.05em
+
+        border: none
+        border-radius: 30px
+        background: $main-green
+        &:hover
+            cursor: pointer
+
+            background: #5aa952
+            transition: background .2s

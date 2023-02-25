@@ -1,0 +1,31 @@
+.footer-down-line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 64px
+    background: #EFEFEF
+    @media (max-width: 380px)
+        height: auto
+    &__container
+        display: flex
+        justify-content: space-between
+        @media (max-width: 380px)
+            flex-direction: column
+    &__copyright
+        color: #828282
+        font: 400 normal 12px/14px $font-stack
+        @media (max-width: 1024px)
+            text-align: start
+            padding: 10px 10px 10px 0
+        @media (max-width: 380px)
+            text-align: start
+            padding: 10px 0
+    &__privacy-policy
+        color: #828282
+        font: 400 normal 12px/14px $font-stack
+        @media (max-width: 1024px)
+            text-align: end
+            padding: 10px 0 10px 10px
+        @media (max-width: 380px)
+            padding: 10px 0
+            text-align: start

@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-legacy": "^4.0.1",
     "eslint": "^8.34.0",
     "sass": "^1.58.3",
+    "terser": "^5.16.5",
     "vite": "^4.1.0"
   }
 }

@@ -1,0 +1,53 @@
+.footer-up-line
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 120px
+
+    background: #fff
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media (max-width: 780px)
+            justify-content: center
+            flex-direction: column
+    &__social-media-icons
+        display: flex
+        justify-content: flex-start
+        flex: 1
+        @media (max-width: 780px)
+            padding: 0
+            margin: 5px 0
+    &__address
+        flex: 1
+
+        color: #000
+        font: 400 normal 1rem/16px $font-stack
+        text-align: center
+        @media (max-width: 780px)
+            margin: 5px 0
+    &__phone
+        flex: 1
+        justify-content: flex-end
+        @media (max-width: 1024px)
+            flex-direction: column
+            align-items: flex-end
+        @media (max-width: 780px)
+            flex-direction: row
+            justify-content: center
+            padding: 0
+            align-items: center
+            margin: 5px 0
+    &__phone-number
+        @media (max-width: 1024px)
+            margin: 5px 20px
+        @media (max-width: 780px)
+            margin: 0 10px
+    &__phone-feedback
+        @media (max-width: 1150px)
+            margin-left: 10px
+        @media (max-width: 1024px)
+            margin: 5px 0
+        @media (max-width: 780px)
+            margin: 0
