@@ -29,8 +29,9 @@ $font-stack: Roboto, sans-serif
         font: 400 normal .8rem/1.5 $font-stack
 =subscribe-location-cards
     display: flex
-    width: 540px
-    height: 212px
+    max-width: 540px
+    width: 100%
+    max-height: 212px
     background: $main-green
 
 html
@@ -49,8 +50,6 @@ body, h1, h2, h3
 
 .container
     +container-box
-    @media (max-width: 1150px)
-        width: 100%
 
 /* HEADER */
 /* HEADER NAV */
@@ -108,6 +107,8 @@ body, h1, h2, h3
     @media (max-width: 580px)
         flex-direction: column
         height: auto
+    @media (max-width: 366px)
+        margin-top: 3.8rem
     &__brand
         display: flex
         justify-content: flex-start
@@ -176,7 +177,6 @@ body, h1, h2, h3
 
 /* MAIN */
 /* NAV */
-
 .content-nav
     height: 79px
     display: flex
@@ -213,7 +213,6 @@ body, h1, h2, h3
             transition: color 0.2s
 
 /* SALE */
-
 .content-sale
     position: relative
 
@@ -221,14 +220,14 @@ body, h1, h2, h3
     display: flex
     justify-content: center
     align-items: center
-    width: 100%
     height: 604px
 
     background-color: $main-green
     @media (max-width: 1150px)
         height: 30em
     @media (max-width: 580px)
-        flex-direction: column
+        position: static
+
         height: auto
     &__wrapper
         display: flex
@@ -238,11 +237,9 @@ body, h1, h2, h3
         @media ( max-width: 1150px )
             width: 100%
             height: 14em
-            margin-left: 30px
         @media (max-width: 580px)
             justify-content: center
             height: 13em
-            margin-left: 0
     &__group
         display: flex
         flex-direction: column
@@ -262,9 +259,11 @@ body, h1, h2, h3
         color: #FFFFFF
         font: 700 normal 48px/56px $font-stack
         @media (max-width: 1150px)
-            font: 700 2.5em/1.5 $font-stack
+            font: 700 2.5rem/1.5 $font-stack
         @media (max-width: 580px)
-            font: 700 2.3em/1.5 $font-stack
+            font: 700 2.3rem/1.5 $font-stack
+        @media (max-width: 320px)
+            font: 700 2rem/1.5 $font-stack
     &__description
         color: #FFFFFF
         font: 400 normal 14px/20px $font-stack
@@ -303,12 +302,15 @@ body, h1, h2, h3
             height: 38rem
             transform: translate(-22%, -50%)
         @media (max-width: 580px)
-            width: 28em
-            height: 28em
-            margin: 10px
+            position: static
+            transform: none
+
+            width: 29rem
+            height: 29rem
+            margin: 10px auto
         @media (max-width: 320px)
-            width: 23em
-            height: 23em
+            width: 20rem
+            height: 20rem
         &_big-circle
             display: flex
             justify-content: center
@@ -330,8 +332,8 @@ body, h1, h2, h3
 
             background: rgba(255, 255, 255, .4)
             @media (max-width: 1440px)
-                width: 45em
-                height: 45em
+                width: 45rem
+                height: 45rem
             @media (max-width: 1150px)
                 width: 35rem
                 height: 35rem
@@ -339,11 +341,11 @@ body, h1, h2, h3
                 width: 31rem
                 height: 31rem
             @media (max-width: 580px)
-                width: 23em
-                height: 23em
+                width: 23rem
+                height: 23rem
             @media (max-width: 320px)
-                width: 20em
-                height: 20em
+                width: 17rem
+                height: 17rem
         &_photo
             width: 584px
             height: 584px
@@ -351,9 +353,11 @@ body, h1, h2, h3
                 width: 30rem
                 height: 30rem
             @media (max-width: 580px)
-                width: 23em
-                height: 23em
-
+                width: 25rem
+                height: 25rem
+            @media (max-width: 320px)
+                width: 20rem
+                height: 20rem
 /* OFFERS */
 .offers
     display: flex
@@ -369,14 +373,13 @@ body, h1, h2, h3
         position: static
 
 .special-offers
-    width: 1110px
     height: 430px
     margin-top: 80px
     @media (max-width: 1150px)
         width: auto
+        height: auto
     @media (max-width: 1024px)
         margin-top: 3rem
-        height: auto
     @media (max-width: 580px)
         margin-top: 0
     &__header
@@ -417,9 +420,8 @@ body, h1, h2, h3
         display: flex
         justify-content: space-between
         flex-wrap: wrap
-        @media (max-width: 1150px)
+        @media (max-width: 1105px)
             justify-content: space-evenly
-            flex-wrap: wrap
     &__card
         display: flex
         flex-direction: column
@@ -430,8 +432,6 @@ body, h1, h2, h3
 
         background: #FFFFFF
         @media (max-width: 1150px)
-            width: 16rem
-            height: 22rem
             margin: .5rem
 
     &__img
@@ -475,12 +475,9 @@ body, h1, h2, h3
     display: flex
     justify-content: space-between
     margin-top: 100px
-    width: $width-container
     height: 212px
     @media (max-width: 1150px)
-        justify-content: space-evenly
         margin-top: 2rem
-        width: 100%
     @media (max-width: 580px)
         flex-direction: column
         align-items: center
@@ -489,9 +486,8 @@ body, h1, h2, h3
     +subscribe-location-cards
     justify-content: space-between
     @media (max-width: 1150px)
-        width: 40%
+        margin-right: 10px
     @media (max-width: 580px)
-        width: 80%
         height: 10rem
         margin: .8rem auto
     &_left-side
@@ -530,8 +526,8 @@ body, h1, h2, h3
             padding: 0
 
             text-align: center
-        @media (max-width: 320px)
-            height: 2rem
+        @media (max-width: 580px)
+            height: 31px
         &::placeholder
             color: #C4C4C4
         &:focus
@@ -564,11 +560,11 @@ body, h1, h2, h3
     justify-content: space-evenly
     padding-left: 40px
     @media (max-width: 1150px)
+        margin-left: 10px
         justify-content: space-between
-        width: 40%
         padding: 10px
     @media (max-width: 580px)
-        width: 80%
+        margin: 0
         height: 10rem
     &__shop-map
         +buttons(#fff, $main-green)
@@ -607,22 +603,48 @@ body, h1, h2, h3
         display: flex
         justify-content: space-between
         align-items: center
+        @media (max-width: 780px)
+            justify-content: center
+            flex-direction: column
     &__social-media-icons
         display: flex
         justify-content: flex-start
         flex: 1
+        @media (max-width: 780px)
+            padding: 0
+            margin: 5px 0
     &__address
         flex: 1
 
         color: #000
         font: 400 normal 1rem/16px $font-stack
         text-align: center
+        @media (max-width: 780px)
+            margin: 5px 0
     &__phone
         flex: 1
         justify-content: flex-end
+        @media (max-width: 1024px)
+            flex-direction: column
+            align-items: flex-end
+        @media (max-width: 780px)
+            flex-direction: row
+            justify-content: center
+            padding: 0
+            align-items: center
+            margin: 5px 0
+    &__phone-number
+        @media (max-width: 1024px)
+            margin: 5px 20px
+        @media (max-width: 780px)
+            margin: 0 10px
     &__phone-feedback
         @media (max-width: 1150px)
             margin-left: 10px
+        @media (max-width: 1024px)
+            margin: 5px 0
+        @media (max-width: 780px)
+            margin: 0
 
 .icon-box
     display: flex
@@ -637,31 +659,66 @@ body, h1, h2, h3
     background: #FFF
     @media (max-width: 1150px)
         margin-right: 10px
+    @media (max-width: 780px)
+        margin: 0 5px
+        width: 2.5rem
+        height: 2.5rem
+    &:hover
+        cursor: pointer
     &_youtube
         width: 22px
         height: 15px
+        @media (max-width: 780px)
+            width: 1.5rem
+            height: 1rem
     &_vk
         width: 28.04px
         height: 15px
+        @media (max-width: 780px)
+            width: 1.9rem
+            height: 1rem
     &_facebook
         width: 10.81px
         height: 20px
+        @media (max-width: 780px)
+            width: 0.7rem
+            height: 1.3rem
     &_instagram
         width: 22px
         height: 22px
+        @media (max-width: 780px)
+            width: 1.5rem
+            height: 1.5rem
 
 /* DOWN-LINE */
 .footer-down-line
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
     height: 64px
-
     background: #EFEFEF
+    @media (max-width: 380px)
+        height: auto
     &__container
         display: flex
         justify-content: space-between
-        align-items: center
-    &__copyright, &__privacy-policy
+        @media (max-width: 380px)
+            flex-direction: column
+    &__copyright
         color: #828282
         font: 400 normal 12px/14px $font-stack
+        @media (max-width: 1024px)
+            text-align: start
+            padding: 10px 10px 10px 0
+        @media (max-width: 380px)
+            text-align: start
+            padding: 10px 0
+    &__privacy-policy
+        color: #828282
+        font: 400 normal 12px/14px $font-stack
+        @media (max-width: 1024px)
+            text-align: end
+            padding: 10px 0 10px 10px
+        @media (max-width: 380px)
+            padding: 10px 0
+            text-align: start
