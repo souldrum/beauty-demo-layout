@@ -20,10 +20,14 @@
             href="favicon-16x16.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         
         <style lang="sass"></style>
         <title>Beauty</title>
-      <link rel="stylesheet" href="assets/index-c3ce3bb5.css">
+      <script async type="module" crossorigin src="assets/index-4a09780a.js"></script>
+      <link rel="stylesheet" href="assets/index-c1f12236.css">
     </head>
     <body>
         <div id="app">
@@ -143,7 +147,7 @@
                                     <div class="subscribe-card_left-side">
                                         <h3 class="subscribe-card__title">Получайте бонусы и подарки</h3>
                                         <p class="subscribe-card__description">Каждый месяц разыгрываем<br>10 000 рублей для наших клиентов</p>
-                                        <form action="/" method="post">
+                                        <form action="" method="post">
                                             <input class="subscribe-card__email" type="email" name="email" placeholder="Введите e-mail">
                                         </form>
                                     </div>
@@ -167,18 +171,18 @@
                         <div class="container">
                             <div class="footer-up-line__container">
                                 <div class="footer-up-line__social-media-icons">
-                                    <div class="icon-box">
+                                    <a class="icon-box" href="#">
                                         <img class="icon-box_youtube" src="assets/youtube_figma-d6d5cba0.svg" alt="youtube" >
-                                    </div>
-                                    <div class="icon-box">
+                                    </a>
+                                    <a class="icon-box" href="#">
                                         <img class="icon-box_vk" src="assets/vk_figma-a394f93d.svg" alt="vk" >
-                                    </div>
-                                    <div class="icon-box">
+                                    </a>
+                                    <a class="icon-box" href="#">
                                         <img class="icon-box_facebook" src="assets/facebook_figma-c58513ac.svg" alt="facebook" >
-                                    </div>
-                                    <div class="icon-box">
+                                    </a>
+                                    <a class="icon-box" href="#">
                                         <img class="icon-box_instagram" src="assets/instagram-86ddb975.svg" alt="instagram" >
-                                    </div>
+                                    </a>
                                 </div>
     
                                 <address class="footer-up-line__address">
@@ -211,6 +215,8 @@
                     </div> <!--/.footer-down-line-->
                 </footer>
         </div> <!--/.app-->
-        <!-- <script type="module" src="/main.js"></script> -->
+        <!-- <script type="module" src="main.js"></script> -->
+      <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+      <script nomodule crossorigin id="vite-legacy-entry" data-src="assets/index-legacy-2f731e36.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
     </body>
 </html>
