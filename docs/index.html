@@ -20,203 +20,382 @@
             href="favicon-16x16.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
         <style lang="sass"></style>
         <title>Beauty</title>
-      <script async type="module" crossorigin src="assets/index-4a09780a.js"></script>
-      <link rel="stylesheet" href="assets/index-c1f12236.css">
+        <script
+            async
+            type="module"
+            crossorigin
+            src="assets/index-4a09780a.js"
+        ></script>
+        <link rel="stylesheet" href="assets/index-c1f12236.css" />
     </head>
     <body>
         <div id="app">
+            <!--Header-->
+            <header class="header">
+                <div class="container">
+                    <div class="header-nav">
+                        <nav class="header-nav__container">
+                            <a class="header-nav__link" href="#">Доставка</a>
+                            <a class="header-nav__link" href="#">Оплата</a>
+                            <a class="header-nav__link" href="#">Отзывы</a>
+                            <a class="header-nav__link" href="#"
+                                >Вопрос-ответ</a
+                            >
+                            <a class="header-nav__link" href="#">Контакты</a>
+                        </nav>
+                    </div>
+                    <!--/.header-nav-->
 
-                <!--Header-->
-                <header class="header">
+                    <div class="header-info">
+                        <section class="header-info__brand">
+                            <img
+                                class="header-info__logo"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAYQSURBVHgB7ZxPbxtFFMDfuCUHTokScUFIEYUzQVXPiT8B4YZQ07hSGzjRfoNuPgF/TtAcuqHiz63wCZycUUXPiKBIiEuVKEFCCNxmh3nOjr22d2Zn3r6dHdr8pMhpdv3s9/PMzu573gJEzMnJSYI/cIE/uTyZ/yRwgTtT8qKWKCAyclH3DJu3FxYWEoiIqARWyNNEJTEagY7yNNFIjEKgpzxNFBJbF0iUp2ldYgdaxEFemmXZrmX7vbZX58vQEi7y1Oi6ib8cHx9Dp9PZNOyHEqGtkdjKFPaRp1ESU4tEpJXpHFwgRZ4mRolBBdaRp4lNYjCBHPI0MUkMIlDJW1cPjyy7OMvTOEh8X8X8ARomyGkMJmI5HfGWhywuLvYqYjYuLzg4aqYqLA+gJk3EjJpCwmyJNhEzah7//hP10i1oTBeCnwfe7m/0hIAHIETv/urXu8BAEzFdCSpwlOjo1esn3ERMH4IJnEl09A7oCTcR05cgArf619dVUubzQELCRnk1YlIIch44gOdP1MOhcQcp0639G5vgSKU89VqDbLAPAQg2hXv9D5bnxCt99euycSeHUeMkTz7rpt3vDyEA5BGYX54ZwUQ/7veW9b8xIUwMaoxEijx8D8NDiIWqXGyQBOaFgUemE1edaCayPpdEqjx8D3j8NX0wKoc0zyUBAt5TuKSqMnEtO5uoOOzITvfLbnqo/+I7nWvJA7lcFjPPJVUPRbHeVRwvgZaS1FCiOVG6RJlJwSKvEBMllsjTeEl0nsIV9bweXkqZE5XLlOkspVxT9u6AGT955zE/O3h6gDFtPZYEHHES6FIMvfrGtW0pwVKW8pMo1eadtYc3B2rkqmHzpCSgvzyA02fyrHvltSufc3X7KqewbyW5+nhVPZ21vPH23vzcuZiV/E9keWn329GHwVHZtgqkluHrSFSJ7hXljbePJM5zyNPUlWgUWLeHQZVoOwFGiQD/zHPJ09SRWCqQqwFEkegDhzwNVeKMQM7uGeIiUS0U76bd9BQ84JSnoUicWIW55SE73YepbXWWIPd85SE4ajOZ7ZfH9JeHVDSqkJnVeTQCm5BXpGwkTq+2FG71r6cdITYLMUnyiviMxKHApuVpihI55Gm0RA55GleJIpQ8DUpUH9sqlzzN1v7Gp4PsbJdDnsZFIh4DJfzPuYunN1KszXUuvwOMKHlVu0g9hXEEJpYdo53CKO/v4lUKUynfUmzQJMrJdnERaVRiE4vIjDxNTYmu8oYvNfXERiTazgWpEo3yNESJPvKQiUmeb0gsT+75fn2i6kRafYJreAkHnpyqSzq8Ljbu4NmoQnzlIaZLOZaR2HQDiKtRhVDkIaXLDMdIpMgbrqYVcDeqEKo8xLhO15FI7WGoY9rPt/c2jM+71b+RcjaqkDryEJeCqtd05mgAlS0sKK8jZJ5o/UZVnlsKNeQNQ4IDrhLZumcwKXFS3uit15LIIW8YDhypkvjbX78mXx18kVhCUMrwqTrX/1MIaWgs0SR+9PYnyZuvvpWAGSd5iHNXruKYWNVU8paHCJHtATxPsUhQvgeh2yey3tXXr21bylbO8obhwJOSkVh1DCTJw0Tvr36TN9Y/XAFxqa/erGGVdhyJhZhISbHAS94wJBAoSKxqKtWWN45ZU2JJTKQg0Vve8FWBiJL4nnrBH03b8Qs9+LU2DnkassTOpVVTTOTo6Gh9aWmJdFsEWaAvdeVpKBKbJIhALnmamCQG+YbqGZytcclDdrDqrEr31tUZ/l2BAAQRaO3Mecobx7RIxJjd74Lc6hXsGIjM3pJAkzcZc2o6M8T0IahAZHxTDF+iI4kiuxtSXms8/oP/tqyDp7/cgZcBvIjnvjGwiZhRUkiU7dbUJmL6EOwYaCkfkbt9TcT0JYjAJm75d6jnrdsuNbkIdss/MHb7HIuhjctDgp7GcHT7uCrJXAQ/D6wjMTZ5SHCBCEVijPKQVgQiPhJjlYe0JhBxkQjn7zFKeUirAhEHiTZalYe0LhAhSmxdHhKFQMRTYhTykGgEIo4So5GHRCUQqZAYlbxoQYkl/xU8ew3xhWZK4oU8CrnEqOX9BwSqVYupCOIUAAAAAElFTkSuQmCC"
+                                alt="logo"
+                            />
+                            <h1 class="header-info__title">BEAUTY</h1>
+                        </section>
 
+                        <div class="header-info__phone">
+                            <div class="header-info__phone-number">
+                                8 (812) 123-45-67
+                            </div>
+                            <button
+                                class="header-info__phone-feedback"
+                                type="button"
+                            >
+                                Обратный звонок
+                            </button>
+                        </div>
+                    </div>
+                    <!--/.header-info-->
+                </div>
+            </header>
+
+            <!--Content-->
+            <main class="content">
+                <div class="content-nav">
+                    <nav class="content-nav__container">
+                        <a class="content-nav__link" href="#">Парикмахерская</a
+                        ><a class="content-nav__link" href="#">Барбершоп</a
+                        ><a class="content-nav__link" href="#">Маникюр</a
+                        ><a class="content-nav__link" href="#">Педикюр</a
+                        ><a class="content-nav__link" href="#">Массаж</a
+                        ><a class="content-nav__link" href="#">Мебель</a>
+                    </nav>
+                </div>
+                <!--/.content-nav-->
+
+                <div class="content-sale">
                     <div class="container">
-                        <div class="header-nav">
-                            <nav class="header-nav__container">
-                                <a class="header-nav__link" href="#">Доставка</a>
-                                <a class="header-nav__link" href="#">Оплата</a>
-                                <a class="header-nav__link" href="#">Отзывы</a>
-                                <a class="header-nav__link" href="#">Вопрос-ответ</a>
-                                <a class="header-nav__link" href="#">Контакты</a>
-                            </nav>
-                        </div> <!--/.header-nav-->
-
-                        <div class="header-info">
-                            <section class="header-info__brand">
-                                <img class="header-info__logo" src="data:image/png;base64,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" alt="logo"
-                                />
-                                <h1 class="header-info__title">BEAUTY</h1>
+                        <div class="content-sale__wrapper">
+                            <section class="content-sale__group">
+                                <h2 class="content-sale__header">
+                                    Супер кресло
+                                </h2>
+                                <p class="content-sale__description">
+                                    Текст акции всегда отражает суть, а не
+                                    просто болтовню, поэтому внимательнее
+                                </p>
+                                <button
+                                    class="content-sale__more"
+                                    type="button"
+                                >
+                                    Подробнее
+                                </button>
                             </section>
-    
-                            <div class="header-info__phone">
-                                <div class="header-info__phone-number">
+                        </div>
+                        <!--/.content-sale__wrapper-->
+
+                        <div class="content-sale__img">
+                            <div class="content-sale__img_big-circle">
+                                <div class="content-sale__img_small-circle">
+                                    <img
+                                        class="content-sale__img_photo"
+                                        src="assets/chair_zoom-ead7e08b.png"
+                                        alt="chair_zoom"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.content-sale__img-->
+                    </div>
+                </div>
+                <!--/.content-sale-->
+
+                <div class="offers">
+                    <div class="container">
+                        <section class="special-offers">
+                            <div class="special-offers__header">
+                                <h3 class="special-offers__header-title">
+                                    Специальные предложения
+                                </h3>
+                                <img
+                                    class="special-offers__header-img"
+                                    src="data:image/png;base64,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"
+                                    alt="car"
+                                />
+                            </div>
+                            <div class="special-offers__cards-container">
+                                <div class="special-offers__card">
+                                    <img
+                                        class="special-offers__img"
+                                        src="assets/chair-67575cdb.png"
+                                        alt="chair"
+                                    />
+                                    <p class="special-offers__description">
+                                        Парикмахерское кресло «Норм»
+                                        гидравлическое
+                                    </p>
+                                    <div class="special-offers__price">
+                                        9 900 &#8381;
+                                    </div>
+                                    <button
+                                        class="special-offers__buy"
+                                        type="button"
+                                    >
+                                        Купить
+                                    </button>
+                                </div>
+                                <div class="special-offers__card">
+                                    <img
+                                        class="special-offers__img"
+                                        src="assets/chair-67575cdb.png"
+                                        alt="chair"
+                                    />
+                                    <p class="special-offers__description">
+                                        Парикмахерское кресло «Норм»
+                                        гидравлическое
+                                    </p>
+                                    <div class="special-offers__price">
+                                        9 900 &#8381;
+                                    </div>
+                                    <button
+                                        class="special-offers__buy"
+                                        type="button"
+                                    >
+                                        Купить
+                                    </button>
+                                </div>
+                                <div class="special-offers__card">
+                                    <img
+                                        class="special-offers__img"
+                                        src="assets/chair-67575cdb.png"
+                                        alt="chair"
+                                    />
+                                    <p class="special-offers__description">
+                                        Парикмахерское кресло «Норм»
+                                        гидравлическое
+                                    </p>
+                                    <div class="special-offers__price">
+                                        9 900 &#8381;
+                                    </div>
+                                    <button
+                                        class="special-offers__buy"
+                                        type="button"
+                                    >
+                                        Купить
+                                    </button>
+                                </div>
+                                <div class="special-offers__card">
+                                    <img
+                                        class="special-offers__img"
+                                        src="assets/chair-67575cdb.png"
+                                        alt="chair"
+                                    />
+                                    <p class="special-offers__description">
+                                        Парикмахерское кресло «Норм»
+                                        гидравлическое
+                                    </p>
+                                    <div class="special-offers__price">
+                                        9 900 &#8381;
+                                    </div>
+                                    <button
+                                        class="special-offers__buy"
+                                        type="button"
+                                    >
+                                        Купить
+                                    </button>
+                                </div>
+                            </div>
+                            <!--/.special-offers__cards-container-->
+                        </section>
+
+                        <section class="subscribe-location">
+                            <div class="subscribe-card">
+                                <div class="subscribe-card_left-side">
+                                    <h3 class="subscribe-card__title">
+                                        Получайте бонусы и подарки
+                                    </h3>
+                                    <p class="subscribe-card__description">
+                                        Каждый месяц разыгрываем<br />10 000
+                                        рублей для наших клиентов
+                                    </p>
+                                    <form action="" method="post">
+                                        <input
+                                            class="subscribe-card__email"
+                                            type="email"
+                                            name="email"
+                                            placeholder="Введите e-mail"
+                                        />
+                                    </form>
+                                </div>
+                                <div class="subscribe-card_right-side">
+                                    <img
+                                        class="subscribe-card__envelope"
+                                        src="assets/mail-53ee2505.svg"
+                                        alt="mail"
+                                    />
+                                </div>
+                            </div>
+                            <!--/.subscribe-card -->
+                            <div class="location-card">
+                                <h3
+                                    class="location-card__title subscribe-card__title"
+                                >
+                                    Заходите к нам
+                                </h3>
+                                <p
+                                    class="location-card__description subscribe-card__description"
+                                >
+                                    Более 300 магазинов<br />по всей России
+                                </p>
+                                <button
+                                    class="location-card__shop-map"
+                                    type="button"
+                                >
+                                    Карта магазинов
+                                </button>
+                            </div>
+                            <!--/.location-card -->
+                        </section>
+                    </div>
+                </div>
+                <!--/.offers-->
+            </main>
+
+            <!--Footer-->
+            <footer class="footer">
+                <div class="footer-up-line">
+                    <div class="container">
+                        <div class="footer-up-line__container">
+                            <div class="footer-up-line__social-media-icons">
+                                <a class="icon-box" href="#">
+                                    <img
+                                        class="icon-box_youtube"
+                                        src="assets/youtube_figma-d6d5cba0.svg"
+                                        alt="youtube"
+                                    />
+                                </a>
+                                <a class="icon-box" href="#">
+                                    <img
+                                        class="icon-box_vk"
+                                        src="assets/vk_figma-a394f93d.svg"
+                                        alt="vk"
+                                    />
+                                </a>
+                                <a class="icon-box" href="#">
+                                    <img
+                                        class="icon-box_facebook"
+                                        src="assets/facebook_figma-c58513ac.svg"
+                                        alt="facebook"
+                                    />
+                                </a>
+                                <a class="icon-box" href="#">
+                                    <img
+                                        class="icon-box_instagram"
+                                        src="assets/instagram-86ddb975.svg"
+                                        alt="instagram"
+                                    />
+                                </a>
+                            </div>
+
+                            <address class="footer-up-line__address">
+                                198555, Невский пр. 140, офис 140
+                            </address>
+
+                            <div
+                                class="footer-up-line__phone header-info__phone"
+                            >
+                                <div
+                                    class="footer-up-line__phone-number header-info__phone-number"
+                                >
                                     8 (812) 123-45-67
                                 </div>
-                                <button class="header-info__phone-feedback" type="button">
+                                <button
+                                    class="footer-up-line__phone-feedback header-info__phone-feedback"
+                                    type="button"
+                                >
                                     Обратный звонок
                                 </button>
                             </div>
-                        </div> <!--/.header-info-->
-                    </div> 
-                </header>
-
-                <!--Content-->
-                <main class="content">
-
-                    <div class="content-nav">
-                        <nav class="content-nav__container">
-                            <a class="content-nav__link" href="#">Парикмахерская</a
-                            ><a class="content-nav__link" href="#">Барбершоп</a
-                            ><a class="content-nav__link" href="#">Маникюр</a
-                            ><a class="content-nav__link" href="#">Педикюр</a
-                            ><a class="content-nav__link" href="#">Массаж</a
-                            ><a class="content-nav__link" href="#">Мебель</a
-                            >
-                        </nav>
-                    </div> <!--/.content-nav-->
-
-                    <div class="content-sale">
-                        <div class="container">
-                            <div class="content-sale__wrapper">
-                                <section class="content-sale__group">
-                                    <h2 class="content-sale__header">
-                                        Супер кресло
-                                    </h2>
-                                    <p class="content-sale__description">
-                                        Текст акции всегда отражает суть, а не
-                                        просто болтовню, поэтому внимательнее
-                                    </p>
-                                    <button class="content-sale__more" type="button">
-                                        Подробнее
-                                    </button>
-                                </section>
-                            </div> <!--/.content-sale__wrapper-->
-    
-                            <div class="content-sale__img">
-                                <div class="content-sale__img_big-circle">
-                                    <div class="content-sale__img_small-circle">
-                                        <img class="content-sale__img_photo" src="assets/chair_zoom-ead7e08b.png" alt="chair_zoom"></img>
-                                    </div>
-                                </div>
-                            </div> <!--/.content-sale__img-->
                         </div>
-                    </div> <!--/.content-sale-->
+                    </div>
+                </div>
+                <!--/.footer-up-line-->
 
-                    <div class="offers">
-                        <div class="container">
-                            <section class="special-offers">
-                                <div class="special-offers__header">
-                                    <h3 class="special-offers__header-title">Специальные предложения</h3>
-                                    <img class="special-offers__header-img" src="data:image/png;base64,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" alt="car">
-                                </div>
-                                <div class="special-offers__cards-container">
-                                    <div class="special-offers__card">
-                                        <img class="special-offers__img" src="assets/chair-67575cdb.png" alt="chair">
-                                        <p class="special-offers__description">Парикмахерское кресло «Норм» гидравлическое</p>
-                                        <div class="special-offers__price">9 900 &#8381;</div>
-                                        <button class="special-offers__buy" type="button">Купить</button>
-                                    </div>
-                                    <div class="special-offers__card">
-                                        <img class="special-offers__img" src="assets/chair-67575cdb.png" alt="chair">
-                                        <p class="special-offers__description">Парикмахерское кресло «Норм» гидравлическое</p>
-                                        <div class="special-offers__price">9 900 &#8381;</div>
-                                        <button class="special-offers__buy" type="button">Купить</button>
-                                    </div> 
-                                    <div class="special-offers__card">
-                                        <img class="special-offers__img" src="assets/chair-67575cdb.png" alt="chair">
-                                        <p class="special-offers__description">Парикмахерское кресло «Норм» гидравлическое</p>
-                                        <div class="special-offers__price">9 900 &#8381;</div>
-                                        <button class="special-offers__buy" type="button">Купить</button>
-                                    </div> 
-                                    <div class="special-offers__card">
-                                        <img class="special-offers__img" src="assets/chair-67575cdb.png" alt="chair">
-                                        <p class="special-offers__description">Парикмахерское кресло «Норм» гидравлическое</p>
-                                        <div class="special-offers__price">9 900 &#8381;</div>
-                                        <button class="special-offers__buy" type="button">Купить</button>
-                                    </div>  
-                                </div> <!--/.special-offers__cards-container-->
-                            </section>
-
-                            <section class="subscribe-location">
-                                <div class="subscribe-card">
-                                    <div class="subscribe-card_left-side">
-                                        <h3 class="subscribe-card__title">Получайте бонусы и подарки</h3>
-                                        <p class="subscribe-card__description">Каждый месяц разыгрываем<br>10 000 рублей для наших клиентов</p>
-                                        <form action="" method="post">
-                                            <input class="subscribe-card__email" type="email" name="email" placeholder="Введите e-mail">
-                                        </form>
-                                    </div>
-                                    <div class="subscribe-card_right-side">
-                                        <img class="subscribe-card__envelope" src="assets/mail-53ee2505.svg" alt="mail">
-                                    </div>
-                                </div> <!--/.subscribe-card -->
-                                <div class="location-card">
-                                    <h3 class="location-card__title subscribe-card__title">Заходите к нам</h3>
-                                    <p class="location-card__description subscribe-card__description">Более 300 магазинов<br>по всей России</p>
-                                    <button class="location-card__shop-map" type="button">Карта магазинов</button>
-                                </div> <!--/.location-card -->
-                            </section>  
-                        </div>
-                    </div> <!--/.offers-->
-                </main>
-
-                <!--Footer-->
-                <footer class="footer">
-                    <div class="footer-up-line">
-                        <div class="container">
-                            <div class="footer-up-line__container">
-                                <div class="footer-up-line__social-media-icons">
-                                    <a class="icon-box" href="#">
-                                        <img class="icon-box_youtube" src="assets/youtube_figma-d6d5cba0.svg" alt="youtube" >
-                                    </a>
-                                    <a class="icon-box" href="#">
-                                        <img class="icon-box_vk" src="assets/vk_figma-a394f93d.svg" alt="vk" >
-                                    </a>
-                                    <a class="icon-box" href="#">
-                                        <img class="icon-box_facebook" src="assets/facebook_figma-c58513ac.svg" alt="facebook" >
-                                    </a>
-                                    <a class="icon-box" href="#">
-                                        <img class="icon-box_instagram" src="assets/instagram-86ddb975.svg" alt="instagram" >
-                                    </a>
-                                </div>
-    
-                                <address class="footer-up-line__address">
-                                    198555, Невский пр. 140, офис 140
-                                </address>
-    
-                                <div class="footer-up-line__phone header-info__phone">
-                                    <div class="footer-up-line__phone-number header-info__phone-number">
-                                        8 (812) 123-45-67
-                                    </div>
-                                    <button class="footer-up-line__phone-feedback header-info__phone-feedback" type="button">
-                                        Обратный звонок
-                                    </button>    
-                                </div>
+                <div class="footer-down-line">
+                    <div class="container">
+                        <div class="footer-down-line__container">
+                            <div class="footer-down-line__copyright">
+                                Лучший магазин &copy; 2019 Все права защищены.
+                                Интернет-магазин оборудования для салонов
+                                красоты
+                            </div>
+                            <div class="footer-down-line__privacy-policy">
+                                Политика конфиденциальности
                             </div>
                         </div>
-                    </div> <!--/.footer-up-line-->
-                    
-                    <div class="footer-down-line">
-                        <div class="container">
-                            <div class="footer-down-line__container">
-                                <div class="footer-down-line__copyright">
-                                    Лучший магазин &copy; 2019 Все права защищены. Интернет-магазин оборудования для салонов красоты
-                                </div>
-                                <div class="footer-down-line__privacy-policy">
-                                    Политика конфиденциальности
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!--/.footer-down-line-->
-                </footer>
-        </div> <!--/.app-->
+                    </div>
+                </div>
+                <!--/.footer-down-line-->
+            </footer>
+        </div>
+        <!--/.app-->
         <!-- <script type="module" src="main.js"></script> -->
-      <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-      <script nomodule crossorigin id="vite-legacy-entry" data-src="assets/index-legacy-2f731e36.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+        <script nomodule>
+            !(function () {
+                var e = document,
+                    t = e.createElement("script");
+                if (!("noModule" in t) && "onbeforeload" in t) {
+                    var n = !1;
+                    e.addEventListener(
+                        "beforeload",
+                        function (e) {
+                            if (e.target === t) n = !0;
+                            else if (!e.target.hasAttribute("nomodule") || !n)
+                                return;
+                            e.preventDefault();
+                        },
+                        !0
+                    ),
+                        (t.type = "module"),
+                        (t.src = "."),
+                        e.head.appendChild(t),
+                        t.remove();
+                }
+            })();
+        </script>
+        <script
+            nomodule
+            crossorigin
+            id="vite-legacy-entry"
+            data-src="assets/index-legacy-2f731e36.js"
+        >
+            System.import(
+                document
+                    .getElementById("vite-legacy-entry")
+                    .getAttribute("data-src")
+            );
+        </script>
     </body>
 </html>
